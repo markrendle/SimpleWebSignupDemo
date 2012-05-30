@@ -1,0 +1,25 @@
+﻿@handler AwesomeThing.Login.LoginPage
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <div>
+            <form action="/login" method="POST">
+                <div>
+                    <label for="user">User:</label>
+                    <input type="text" name="user" id="user"/>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password"/>
+                </div>
+                <input type="hidden" value="@Handler.ReturnUrl" name="returnUrl"/>
+                <input type="submit" value="Log in"/>
+            </form>
+        </div>
+    </body>
+</html>
