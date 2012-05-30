@@ -6,7 +6,6 @@ namespace AwesomeThing.Admin
     using Simple.Web;
 
     [UriTemplate("/admin", false)]
-    [UriTemplate("/signups")]
     public class Admin : AdminBase, IGet, IOutput<List<Signup>>//, ICacheability
     {
         public Status Get()

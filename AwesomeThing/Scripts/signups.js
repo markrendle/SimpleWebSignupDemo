@@ -13,7 +13,8 @@ function getSelfHref(obj) {
 }
 
 $(function () {
-    $.getJSON("/admin/signups")
+    $.ajaxSetup({ cache: false });
+    $.getJSON("/admin")
         .success(function (data) {
             for (var i in data) {
                 var sendInvitationLink = getLink(data[i], 'send.invitation');
