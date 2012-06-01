@@ -2,6 +2,7 @@
 {
     using Simple.Data;
     using Simple.Web;
+    using Simple.Web.Behaviors;
 
     [UriTemplate("/signup")]
     public class PostSignup : IPost, IInput<Signup>

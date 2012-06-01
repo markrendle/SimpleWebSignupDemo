@@ -2,6 +2,8 @@
 {
     using System;
     using Simple.Web;
+    using Simple.Web.Authentication;
+    using Simple.Web.Behaviors;
 
     [UriTemplate("/login")]
     public class LoginPage : IGet, ILoginPage

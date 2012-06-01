@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Simple.Data;
     using Simple.Web;
+    using Simple.Web.Behaviors;
     using Simple.Web.Links;
 
     [UriTemplate("/signup/{Id}")]

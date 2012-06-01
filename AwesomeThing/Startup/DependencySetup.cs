@@ -8,6 +8,7 @@ namespace AwesomeThing.Startup
     using Admin;
     using Ninject.Modules;
     using Simple.Web;
+    using Simple.Web.Authentication;
 
     public class DependencySetup : Simple.Web.Ninject.NinjectStartupBase
     {
