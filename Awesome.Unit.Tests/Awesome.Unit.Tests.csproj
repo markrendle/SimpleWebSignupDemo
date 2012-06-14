@@ -39,12 +39,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginConcerns\Post\CorrectPassword.cs" />
     <Compile Include="LoginConcerns\Post\WrongPassword.cs" />
+    <Compile Include="LoginConcerns\Routing\LoginRouting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scaffold\NUnit.cs" />
+    <Compile Include="Scaffold\SimpleWeb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
