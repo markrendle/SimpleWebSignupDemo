@@ -8,7 +8,16 @@ END
 CREATE DATABASE [SimpleWeb_Signup];
 GO
 
+IF NOT EXISTS(SELECT name FROM master.dbo.syslogins WHERE name = 'SimpleWeb_SignupUser')
+BEGIN
+    CREATE LOGIN [SimpleWeb_SignupUser] WITH PASSWORD = 'password', DEFAULT_DATABASE=[blank_7digbatcher], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+END
+GO
+
 USE [SimpleWeb_Signup]
+
+CREATE USER [SimpleWeb_SignupUser] FOR LOGIN [SimpleWeb_SignupUser] WITH DEFAULT_SCHEMA=[dbo];
+exec sp_addrolemember 'db_owner', 'SimpleWeb_SignupUser';
 
 CREATE TABLE [dbo].[Signup](
     [Id] [uniqueidentifier] ROWGUIDCOL  NOT NULL,

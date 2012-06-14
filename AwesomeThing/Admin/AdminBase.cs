@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using System.Web;
-
-namespace AwesomeThing.Admin
+﻿namespace AwesomeThing.Admin
 {
     using Simple.Web;
     using Simple.Web.Authentication;

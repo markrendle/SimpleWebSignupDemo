@@ -1,14 +1,13 @@
 namespace AwesomeThing.Admin
 {
-    using System;
-    using System.Collections.Generic;
+	using System.Collections.Generic;
     using Simple.Data;
     using Simple.Web;
     using Simple.Web.Behaviors;
     using Simple.Web.Http;
 
     [UriTemplate("/admin", false)]
-    public class Admin : AdminBase, IGet, IOutput<List<Signup>>//, ICacheability
+    public class Admin : AdminBase, IGet, IOutput<List<Signup>>, ICacheability
     {
         public Status Get()
         {
