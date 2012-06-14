@@ -1,4 +1,6 @@
-﻿namespace AwesomeThing
+﻿using System;
+
+namespace AwesomeThing
 {
     using Simple.Data;
     using Simple.Web;
@@ -10,7 +12,11 @@
         public Status Post()
         {
             var db = Database.OpenNamedConnection("AwesomeThing");
-            var inserted = db.Signups.Insert(Email: Input.Email);
+            var inserted = db.Signups.Insert(
+				Id: Guid.NewGuid(),
+				Email: Input.Email,
+				CreatedAt: DateTime.Now
+			);
             Number = inserted.Number;
             return 200;
         }

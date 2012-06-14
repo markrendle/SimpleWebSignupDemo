@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Signup](
  CONSTRAINT [PK_Signup] PRIMARY KEY CLUSTERED 
 (
     [Id] ASC
-)
+))
 
 CREATE TABLE [dbo].[Invitation](
     [Id] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
@@ -16,4 +16,4 @@ CREATE TABLE [dbo].[Invitation](
  CONSTRAINT [PK_Invitation] PRIMARY KEY CLUSTERED 
 (
     [Id] ASC
-)
+))
