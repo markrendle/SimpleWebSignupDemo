@@ -1,7 +1,6 @@
 ﻿namespace AwesomeThing.Admin
 {
     using System;
-    using System.Collections.Generic;
     using Simple.Data;
     using Simple.Web;
     using Simple.Web.Behaviors;
