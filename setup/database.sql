@@ -10,7 +10,7 @@ GO
 
 IF NOT EXISTS(SELECT name FROM master.dbo.syslogins WHERE name = 'SimpleWeb_SignupUser')
 BEGIN
-    CREATE LOGIN [SimpleWeb_SignupUser] WITH PASSWORD = 'password', DEFAULT_DATABASE=[blank_7digbatcher], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+    CREATE LOGIN [SimpleWeb_SignupUser] WITH PASSWORD = 'password', DEFAULT_DATABASE=[SimpleWeb_SignupUser], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
 END
 GO
 
