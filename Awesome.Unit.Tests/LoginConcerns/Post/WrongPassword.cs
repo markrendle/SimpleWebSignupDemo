@@ -1,4 +1,4 @@
-﻿using AwesomeThing.Login;// ReSharper disable UseObjectOrCollectionInitializer
+﻿using AwesomeThing.Login;
 using NUnit.Framework;
 
 namespace Tests.LoginConcerns.with_a_login_page_and_a_bad_password
@@ -23,15 +23,15 @@ namespace Tests.LoginConcerns.with_a_login_page_and_a_bad_password
 	{
 		public PostLogin subject;
 
-
 		[Given]
 		public void a_login_page_and_a_bad_password()
 		{
-			subject = new PostLogin();
-			subject.Input = new Login{
-				Password = "rubbish",
-				User="junk"
-			};
+			subject = new PostLogin {
+			          	Input = new Login {
+			          	        	Password = "rubbish",
+			          	        	User = "junk"
+			          	        }
+			          };
 		}
 	}
 }

@@ -6,6 +6,14 @@ using Simple.Web;
 
 namespace Tests.Scaffold
 {
+	public static class My
+	{
+		public static IEnumerable<Assembly> site()
+		{
+			return AppDomain.CurrentDomain.GetAssemblies();
+		}
+	}
+
 	public static class SimpleWebExtensions
 	{
 		public static IEnumerable<Type> GetHandlersFor(this IEnumerable<Assembly> assemblies, string route)
