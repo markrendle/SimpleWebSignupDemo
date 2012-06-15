@@ -15,7 +15,7 @@ namespace Tests.LoginConcerns.with_a_login_page_and_a_bad_password
 		[Then]
 		public void I_should_be_redirected_back_to_the_login_page()
 		{
-			Assert.That(subject.Location, Is.EqualTo("/login"));
+			subject.Location.should_be_equal_to("/login");
 		}
 	}
 

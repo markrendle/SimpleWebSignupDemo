@@ -20,7 +20,8 @@ namespace Tests.LoginConcerns.Routing
 				.GetHandlersFor("/login")
 				.RespondingTo<IPost>();
 
-			Assert.That(matches.Single().FullName, Is.EqualTo(typeof(PostLogin).FullName)); // gets wrapped in RunTimeType :-(
+			matches.Single().should_be_of_type<PostLogin>();
+			
 		}
 
 		[Then]
@@ -32,7 +33,7 @@ namespace Tests.LoginConcerns.Routing
 				.RespondingTo<IPost>()
 				.Count();
 
-			Assert.That(match_count, Is.EqualTo(1));
+			match_count.should_be_equal_to(1);
 		}
 
 		IEnumerable<Assembly> MySite()
