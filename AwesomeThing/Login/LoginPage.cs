@@ -19,7 +19,7 @@
     [UriTemplate("/login")]
     public class PostLogin : IPost, ILogin, IInput<Login>, IMayRedirect
     {
-        Guid mark = new Guid("{BA49D759-1C6D-48E9-8181-76FBF24985FF}");
+    	public static readonly Guid mark = new Guid("{BA49D759-1C6D-48E9-8181-76FBF24985FF}");
         public Status Post()
         {
             if (Input.User == "mark" && Input.Password == "password")
